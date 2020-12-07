@@ -12,12 +12,13 @@ class Dog
 
   # classes by default have to_s method
   def to_s
-    "This #{@breed}'s first name is #{@name}"
+    "This #{@breed}'s first name is #{@name} and the owner is #{@owner}"
   end
-
-  dog = Dog.new
-  dog.name = "Fido"
-  dog.breed = "Aussie"
+  # order of arguments matters and must match order of intialize method args
+  dog = Dog.new("Fido", "Ryan", "Lab")
+  dag = Dog.new("Dundee", "Maria", "Aussie")
+  puts dag
   puts dog
+  
 
 end
