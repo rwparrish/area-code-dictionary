@@ -21,7 +21,8 @@ end
  
 # Get area code based on given hash and key
 def get_area_code(dial_book, selection)
-  area_code = dial_book.values_at(selection).join()
+  # dial_book.values_at(selection).join()
+  dial_book[selection]
 end
 
 # Execution flow
