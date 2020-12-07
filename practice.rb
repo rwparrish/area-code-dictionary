@@ -1,20 +1,16 @@
 require 'pry'
 
 class Dog
+  attr_accessor :name, :owner, :breed
 
-attr_accessor :name, :owner, :breed
-
-def initialize
-  @name = name 
-  @breed = breed 
-  @owner = owner
+# classes by default have to_s method
+def to_s
+  "This #{@breed}'s first name is #{@name}"
 end
 
-
-fido = Dog.new
-
-fido.name = "Dundee"
-
-puts fido.breed
+dog = Dog.new
+dog.name = "Fido"
+dog.breed = "Aussie"
+puts dog
 
 end
